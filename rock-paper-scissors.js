@@ -3,7 +3,7 @@ let rps_choice = ["rock", "paper", "scissors"];
 let userChoice;
 
 let computerChoice;
-let randomNumber = Math.floor(Math.random() * choices.length);
+let randomNumber = Math.floor(Math.random() * rps_choice.length);
 
 let computerWins = 0;
 let userWins =0;
