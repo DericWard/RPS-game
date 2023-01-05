@@ -29,15 +29,13 @@ if (((playerChoice === 'rock') && (computerChoice === 'scissors')) ||
     playerWins++;
     alert("You win!");
    }
-else if (((computerChoice === 'rock') && (playerChoice === 'scissors')) ||
-        ((computerChoice === 'paper') && (playerChoice === 'rock')) ||
-        ((computerChoice === 'scissors') && (playerChoice === 'paper'))) {
-        computerWins++;
-        alert("You lose!");
-        }
-else {
+else if (computerChoice ===  playerChoice) {
     ties++;
-    alert('it is a tie!');
+    alert('it is a tie!');      
+    }
+else {
+    computerWins++;
+    alert("You lose!");
    }
 
 // display results + play again or quit? 
