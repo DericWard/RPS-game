@@ -38,7 +38,8 @@ else {
    }
 
 // display results + play again or quit? 
-if (confirm('You have won ' + playerWins + ' times. /nThe computer has won ' + computerWins + ' times! \nPress OK to play again or Cancel to quit!')) {
+if (confirm('You have won ' + playerWins + ' times. \nThe computer has won: ' + computerWins 
+    + ' times \nThere have been ' + ties + ' ties. \nPress OK to play again or Cancel to quit!')) {
     playAgain = true;
 } 
 else {
