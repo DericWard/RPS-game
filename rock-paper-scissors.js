@@ -14,13 +14,13 @@ while (playAgain === true) {
 // ask player for a choice
 playerChoice = prompt('Please enter your choice of rock, paper, or scissors: ');
 
-// select rock, paper, or scissors at random
+// randomly select either rock, paper, or scissors
 let randomIndex = Math.floor(Math.random() * rps_choices.length);
 let computerChoice = rps_choices[randomIndex];
 
 // display the choices made by the player and the computer
-alert('You chose: ' + playerChoice + '. The computer chose: ' + computerChoice + '. '
-    + 'The randomIndex value is: ' + randomIndex + '.');
+alert('You chose: ' + playerChoice + '.\nThe computer chose: ' + computerChoice + '.'
+    + '\nThe randomIndex value is: ' + randomIndex + '.');
 
 // check who won 
 if (((playerChoice === 'rock') && (computerChoice === 'scissors')) || 
@@ -39,7 +39,7 @@ else {
    }
 
 // display results + play again or quit? 
-if (confirm('You have won ' + playerWins + ' times, and the computer has won ' + computerWins + ' times! Press OK to play again or Cancel to quit!')) {
+if (confirm('You have won ' + playerWins + ' times, and the computer has won ' + computerWins + ' times! \nPress OK to play again or Cancel to quit!')) {
     playAgain = true;
 } 
 else {
