@@ -14,3 +14,16 @@ create an if-then-else section that compares userChoice to computerChoice to det
 display who won
 
 ask the user if they want to play another game
+
+rules: 
+rock beats scissors
+rock loses to paper
+rock ties rock
+
+scissors beats paper
+scissors loses to rock
+scissors ties scissors
+
+paper beats rock
+paper loses to scissors
+paper ties paper

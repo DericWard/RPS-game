@@ -1,69 +1,67 @@
-let rps_choice = ["rock", "paper", "scissors"];
+let rps_choices = ['rock', 'paper', 'scissors'];
 
-let userChoice;
+let randomIndex = Math.floor(Math.random() * rps_choices.length);
 
-let computerChoice;
-let randomNumber = Math.floor(Math.random() * rps_choice.length);
+let computerChoice = rps_choices[randomIndex];
+let playerChoice;
 
 let computerWins = 0;
-let userWins =0;
+let playerWins =0;
 let ties = 0;
 
 let playAgain = 0;
 
-// let computerChoice = choices[randomIndex];
+playerChoice = prompt('Please enter your choice of rock, paper, or scissors: ');
 
-userChoice = prompt("Please enter your choice of rock, paper, or scissors: ");
+alert('You chose: ' + playerChoice);
+alert('The computer chooses: ' + computerChoice);
 
-computerChoice = rps_choice[randomNumber];
 
-alert("The computer chooses: " + computerChoice);
-
-// start of winner selection process 
-if (userChoice === "rock" || "paper" || "scissors") {
-    alert("You chose : " + userChoice);
-}
-else {
-    alert("Invalid input you must choose only rock or paper or scissors!")
-}
-
-if (computerChoice === "rock" && userChoice === "paper") {
-    userWins++;
-    alert("You're the winner!");
-}
-if (computerChoice === "rock" && userChoice === "rock") {
-    ties++;
-    alert("It's a tie!");
-}
-if (computerChoice === "rock" && userChoice === "scissors") {
-    computerWins++;
-    alert("You lost!");
+if (playerChoice === 'rock'){
+    if (computerChoice === 'rock') {
+        ties++;
+        alert('it is a tie!');
+    }
+    else if (computerChoice === 'paper') {
+        computerWins++;
+        alert('You lose!');
+    }
+    else if (computerChoice === 'scissors') {
+        playerWins++;
+        alert('You win!');
+    }
 }
 
-if (computerChoice === "paper" && userChoice === "paper") {
-    ties++;
-    alert("It's a tie!");
-}
-if (computerChoice === "paper" && userChoice === "rock") {
-    computerWins++;
-    alert("You lose!");
-}
-if (computerChoice === "paper" && userChoice === "scissors") {
-    userWins++;
-    alert("You win!");
+if (playerChoice === 'paper'){
+    if (computerChoice === 'paper') {
+        ties++;
+        alert('it is a tie!');
+    }
+    else if (computerChoice === 'scissors') {
+        computerWins++;
+        alert('You lose!');
+    }
+    else if (computerChoice === 'rock') {
+        playerWins++;
+        alert('You win!');
+    }
 }
 
-if (computerChoice === "scissors" && userChoice === "paper") {
-    computerWins++;
-    alert("You lose!");
+if (playerChoice === 'scissors'){
+    if (computerChoice === 'scissors') {
+        ties++;
+        alert('it is a tie!');
+    }
+    else if (computerChoice === 'rock') {
+        computerWins++;
+        alert('You lose!');
+    }
+    else if (computerChoice === 'paper') {
+        playerWins++;
+        alert('You win!');
+    }
 }
-if (computerChoice === "scissors" && userChoice === "rock") {
-    userWins++;
-    alert("You win!");
-}
-if (computerChoice === "scissors" && userChoice === "scissors") {
-    ties++;
-    alert("It's a tie!");
-}
-// end of winner selection process 
+
+alert("You have won " + playerWins + " times, and the computer has won " + computerWins + " times!");
+
 
