@@ -14,14 +14,14 @@ while (playAgain === true) {
 playerChoice = prompt('Please enter your choice of rock, paper, or scissors:');
 
 while (!((playerChoice === "rock") || (playerChoice === "paper") || (playerChoice === "scissors"))) {
-        playerChoice = prompt('Invalid input: Enter either rock or paper or scissors only.\nPress Cancel to quit the game.');
+        playerChoice = prompt('Invalid input: Enter either rock or paper or scissors only \nPress Cancel to quit the game');
         playerChoice = playerChoice.toLowerCase();
     }
 
 let randomIndex = Math.floor(Math.random() * rps_choices.length);
 let computerChoice = rps_choices[randomIndex];
 
-alert('You chose: ' + playerChoice + '.\nThe computer chose: ' + computerChoice + '.');
+alert('You chose ' + playerChoice + '.\nThe computer chose ' + computerChoice + '.');
 
 if (((playerChoice === 'rock') && (computerChoice === 'scissors')) || 
     ((playerChoice === 'paper') && (computerChoice === 'rock')) || 
@@ -38,8 +38,8 @@ else {
     alert('You lose!');
    }
 
-if (confirm('You have won ' + playerWins + ' times. \nThe computer has won ' + computerWins 
-    + ' times \nThere have been ' + ties + ' ties. \nPress OK to play again or Cancel to quit!')) {
+if (confirm('You won ' + playerWins + ' times \nThe computer won ' + computerWins 
+    + ' times \nThere were ' + ties + ' ties \nPress OK to play again, or Cancel to quit the game!')) {
     playAgain = true;
     } 
 else {
