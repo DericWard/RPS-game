@@ -1,4 +1,4 @@
-let rps_choices = ['rock', 'paper', 'scissors'];
+let rpsChoices = ['rock', 'paper', 'scissors'];
 
 let playerChoice;
 
@@ -18,8 +18,8 @@ while (!((playerChoice === "rock") || (playerChoice === "paper") || (playerChoic
         playerChoice = playerChoice.toLowerCase();
     }
 
-let randomIndex = Math.floor(Math.random() * rps_choices.length);
-let computerChoice = rps_choices[randomIndex];
+let randomIndex = Math.floor(Math.random() * rpsChoices.length);
+let computerChoice = rpsChoices[randomIndex];
 
 alert('You chose ' + playerChoice + '.\nThe computer chose ' + computerChoice + '.');
 
@@ -31,7 +31,7 @@ if (((playerChoice === 'rock') && (computerChoice === 'scissors')) ||
    }
 else if (computerChoice ===  playerChoice) {
     ties++;
-    alert('it is a tie!');      
+    alert('It is a tie!');      
     }
 else {
     computerWins++;
