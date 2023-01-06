@@ -13,7 +13,7 @@ while (playAgain === true) {
 
 playerChoice = prompt('Please enter your choice of rock, paper, or scissors:');
 
-    while (!((playerChoice === "rock") || (playerChoice === "paper") || (playerChoice === "scissors"))) {
+while (!((playerChoice === "rock") || (playerChoice === "paper") || (playerChoice === "scissors"))) {
         playerChoice = prompt('Invalid input: Enter either rock or paper or scissors only.');
         playerChoice = playerChoice.toLowerCase();
     }
@@ -41,10 +41,10 @@ else {
 if (confirm('You have won ' + playerWins + ' times. \nThe computer has won: ' + computerWins 
     + ' times \nThere have been ' + ties + ' ties. \nPress OK to play again or Cancel to quit!')) {
     playAgain = true;
-} 
+    } 
 else {
     playAgain = false;
-}
+    }
 }
 
 
